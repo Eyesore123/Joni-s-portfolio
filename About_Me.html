@@ -7,6 +7,8 @@
     <title>About Me</title>
 </head>
 <body>
+    <canvas id="canvas"></canvas>
+    <div class="content">
     <h1>
         Joni Putkinen
     </h1>
@@ -14,20 +16,26 @@
         width="300"
         height="400"
     >
-    <h2>
-        Who am I?
-    </h2>
-    <p>Hey, my name is Joni. I'm a male, 31 years old. Currently I'm working as a sports secretary in the municipality of Ilomantsi. I graduated from University of Jyväskylä in 2019, with three master's degrees in my pocket, and a couple of years later I ended up here in Ilomantsi. I guess I'm lucky for having been able to work in a job that fits my education. I could see myself working in a whole new different field in the future, though.</p> 
-    <p>I'm a nerd who's into all sorts of things. On my own time I read books, play computer and console games, lift weights, build computers and learn to code. I'm still trying to figure out what to do with my life.</p>
-    <p>
-        Um, what else? Well, I'm an introverted, calm and focused person. I have one degree from philosophy so occasionally I might sound like a philosopher and be argumentative. One person that I knew years ago told me that I'm an observer when it comes to personality traits - I tend to watch situations and behaviors closely and react only after thinking things through. Admittedly she was right, I'm an introvert after all, but I've always seen it as a positive. I can be socially adept under right circumstances. I have my patience with stupidity, but I'm not going to tag along for long when I get bored or when people test me with their drama and stupid remarks.
-    </p>
-    <p>I try to be courageous in life, meet new people, try new things and venture in new projects in order to counterbalance my natural introvertedness. </p>
+    
+    <div id="container1">
 
-    <h2>
-        Education
-    </h2>
-    <p>
+        <h2>
+        Who am I?
+        </h2>
+        <p>Hey, my name is Joni. I'm a male, 31 years old. Currently I'm working as a sports secretary in the municipality of Ilomantsi. I graduated from University of Jyväskylä in 2019, with three master's degrees in my pocket, and a couple of years later I ended up here in Ilomantsi. I guess I'm lucky for having been able to work in a job that fits my education. I could see myself working in a whole new different field in the future, though.</p> 
+        <p>I'm a nerd who's into all sorts of things. On my own time I read books, play computer and console games, lift weights, build computers and learn to code. I'm still trying to figure out what to do with my life.</p>
+        <p>
+        Um, what else? Well, I'm an introverted, calm and focused person. I have one degree from philosophy so occasionally I might sound like a philosopher and be argumentative. One person that I knew years ago told me that I'm an observer when it comes to personality traits - I tend to watch situations and behaviors closely and react only after thinking things through. Admittedly she was right, I'm an introvert after all, but I've always seen it as a positive. I can be socially adept under right circumstances. I have my patience with stupidity, but I'm not going to tag along for long when I get bored or when people test me with their drama and stupid remarks.
+        </p>
+        <p>I try to be courageous in life, meet new people, try new things and venture in new projects in order to counterbalance my natural introvertedness.
+        </p>
+    </div>
+    
+    <div id="container2">
+            <h2 class="center-text">
+            Education
+            </h2>
+        <p>
         <ul>
             <li>
                 Master of Sports Sciences; 2018; Social Sciences of Sport
@@ -47,19 +55,18 @@
                     </li>
                 </ul>
         </ul>
-    </p>
-    <h2>
+        </p>
+    </div>
+    <div id="container3">
+        <h2 class="center-text">
         Work Experience
-    </h2>
-    <p>
+        </h2>
         <ul>
             <li style="font-weight: bolder;">
                 Sports Secretary 
             </li>
             <br />
-            August 2022 - present
-            <br />
-            <br />
+            <div class="something">August 2022 - present</div>
             <ul>
                 <li>
                     Administrative work: contracts with land owners and different associates, team supervising,<br />
@@ -67,12 +74,15 @@
                 </li>
             </ul>
         </ul>
+        <br />
+        <br />
         <ul>
             <li style="font-weight: bolder;">
                 Sales agent
             </li>
-            <br />
-            2021 - 2022
+            
+            <div class="something">2021 - 2022</div>
+    
             <br />
             <br />
             <ul>
@@ -81,20 +91,25 @@
                 </li>
             </ul>
         </ul>
-        
-    </p>
-    <p>
+        <br>
+    </div> 
+        <p>
         <div class="center-text">
         <a href="index.html">
             Previous page
         </a>
         </div>
-    </p>
-    <hr />
-    <footer>
-        <p style="text-align:center">
-            Copyright © 2023 Joni Putkinen. All Rights Reserved.
         </p>
-     </footer>    
+        <hr />
+    <footer>
+        <br>
+        <div style="text-align:center">
+            Copyright © 2023 Joni Putkinen. All Rights Reserved.
+        </div>
+        <br>
+     </footer>
+    </div>
+
+    <script src="index.js" charset="utf-8"></script>
 </body>
 </html>
