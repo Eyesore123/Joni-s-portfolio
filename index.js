@@ -1,6 +1,6 @@
 // Create particle array
 let particles = [];
-const numParticles = 100;
+const numParticles = 300;
 
 // Get canvas element and its 2d context
 const canvas = document.getElementById('canvas');
@@ -43,5 +43,3 @@ function draw() {
 
 // Initialize canvas and start draw loop
 draw();
-
-
