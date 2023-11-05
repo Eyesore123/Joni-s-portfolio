@@ -1,14 +1,42 @@
-h1 {
+body {
+    width: auto;
+}
+
+#canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    /* Add other styles for your content container here */
+}
+
+h1, h2, h3 {
     text-align: center;
+   
 }
 
 h2 {
-    text-align: center;
+    margin-bottom: 40px;
+    display: inline-block;
+    width: 100%;
+}
+
+h3 {
+    font-size: 18px;
 }
 
 img {
     display: block;
     margin: auto;
+}
+
+a:hover {
+    color:aqua;
 }
 
 .center-text {
@@ -17,4 +45,85 @@ img {
 
 html {
     background-color: rgb(214, 199, 199);
+}
+
+p, li {
+    
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+    width: 1402px;
+}
+
+ul {
+    width: 100%;
+    text-align: center;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+ul, ol, li {
+    margin: 0; /* Remove default margin */
+    padding-left: 20px; /* Adjust the padding to move the text closer to the bullets */
+}
+
+#profilepic {
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#container1, #container2, #container3, .ingress {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 1px solid black;
+    padding: 20px 100px;
+}
+
+.something {
+    text-align: center;
+    padding: 30px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    #profilepic {
+        width: 250px;
+        height: 250px
+    }
+
+    #container1, #container2, #container3, .ingress {
+        margin: auto;
+    }
+
+}
+
+hr {
+    position: relative;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: black;
+    width: 100%;
+}
+
+footer {
+    margin-bottom: 30px;
+}
+
+#personalinfo {
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
