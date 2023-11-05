@@ -7,6 +7,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+    animation-duration: 9999999999999s;
 }
 
 .content {
@@ -75,6 +76,8 @@ ul, ol, li {
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
+    border: 20px solid aqua;
+    border-radius: 25%;
 }
 
 #container1, #container2, #container3, .ingress {
@@ -104,9 +107,33 @@ ul, ol, li {
     }
 
     #container1, #container2, #container3, .ingress {
-        margin: auto;
+        margin: 50px;
+        padding: 20px 30px;
     }
 
+}
+
+@media (min-width: 600px) and (max-width: 1500px) {
+    #container1, #container2, #container3, .ingress {
+        margin: 50px 100px;
+        padding: 20px 50px;
+    }
+}
+
+@media (min-width: 1500px)  {
+    #container1, #container2, #container3, .ingress {
+        margin: 50px 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1100px;
+    }
 }
 
 hr {
