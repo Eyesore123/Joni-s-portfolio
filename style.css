@@ -289,6 +289,20 @@ button {
     padding: 0px;
 }
 
+.downloadbtn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 4px;
+    border-radius: 5%;
+  }
+
+  .downloadbtn:hover {
+    color: black;
+    background-color: white;
+  }
+
 #to-do-list li:hover {
     background: greenyellow;
   }
