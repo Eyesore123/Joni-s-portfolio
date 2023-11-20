@@ -298,7 +298,7 @@ button {
     border-radius: 5%;
   }
 
-  .downloadbtn:hover {
+.downloadbtn:hover {
     color: black;
     background-color: white;
   }
@@ -325,3 +325,7 @@ button {
     background-color: orange;
 }
 
+#githubbutton:hover {
+    background-color: white;
+    border-radius: 50%;
+}
