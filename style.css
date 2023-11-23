@@ -90,6 +90,7 @@ li {
     width: 100%;
     height: 600px;
 }
+
 .flip-card {
     background-color: transparent;
     width: 500px;
@@ -99,10 +100,14 @@ li {
 .flip-card-inner {
     position: relative;
     text-align: center;
-    transition: transform 0.8s;
+    transition: transform 1.2s;
     transform-style: preserve-3d;
     transform-origin: center;
   }
+
+.flip-card-inner.flipped {
+    transform: rotateY(180deg);
+}
 
 #profilepic, #profilepicreversed {
     position: absolute;
@@ -124,6 +129,7 @@ li {
 
 .flip-card-inner:hover {
     transform: rotateY(180deg);
+    cursor: pointer;
   }
 
 #projects {
@@ -147,7 +153,6 @@ li {
     border: 1px solid black;
     padding: 20px 100px;
 }
-
 
 .something {
     text-align: center;
@@ -222,7 +227,15 @@ li {
     }
     span.addBtn {
         max-width: 250px;
-    }    
+    }
+    
+    .flip-card-container {
+        height: 290px;
+    }
+
+    .flip-card-inner:not(.flipped) {
+        transform: none;
+    }
 }
 
 #socialmedia {

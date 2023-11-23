@@ -13,7 +13,7 @@
     <div class="content">
     <h1>Joni's homepage</h1>
 
-    <h2>I'm a Sport Secretary in the municipality of Ilomantsi</h2>
+    <h2>I'm a Sports Secretary in the municipality of Ilomantsi</h2>
     <h3>(Also a skillful software developer these days)</h3>
         <br>
         
@@ -24,7 +24,7 @@
                 
                 <div class="profilepic">
             
-                    <img id="profilepic" src="./Assets/Images/profiilikuva_WhatApp.jpg"
+                    <img id="profilepic" class="flip-trigger" src="./Assets/Images/profiilikuva_WhatApp.jpg"
                     width="500"
                     height="500"
                     />   
@@ -32,7 +32,7 @@
                 </div>
                 <div class="profilepicreversed">
                 
-                    <img id="profilepicreversed" src="./Assets/Images/profiilikuva_WhatApp_canvas_flipped_vertically.jpg"
+                    <img id="profilepicreversed" class="flip-trigger" src="./Assets/Images/profiilikuva_WhatApp_canvas_flipped_vertically.jpg"
                     width="500"
                     height="500"/>
                 
@@ -61,7 +61,7 @@
         <a href="./Assets/CV/Blue and Black Academic Resume/English - Resume_Joni Putkinen_with_link.pdf" download="CV_Joni_Putkinen" download><button class="downloadbtn" style="width: 80px" value="download"> Download</button></a>   (In english)
 
         </div>
-    <p1>
+    <p>
         <br /><br />
         <div class="center-text">
         <a href="./projects.html">
@@ -85,7 +85,7 @@
        <br /><br /> 
        <hr />
 
-    </p1>
+    </p>
 
     <footer>
     <br>
@@ -96,8 +96,19 @@
     </footer>
     </div>
  
-
     <script src="index.js" charset="utf-8"></script>
+    <script>
+    // Get all elements with the class 'flip-trigger'
+    var flipTriggers = document.querySelectorAll('.flip-trigger');
+
+    // Add a click event listener to each trigger
+    flipTriggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+            // Toggle the 'flipped' class on the closest '.flip-card-inner' element
+            this.closest('.flip-card-inner').classList.toggle('flipped');
+        });
+    });
+    </script>
 </body>
 </html>
 
