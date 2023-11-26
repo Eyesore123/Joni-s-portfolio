@@ -106,16 +106,16 @@ li {
     transition: transform 1.2s;
     transform-style: preserve-3d;
     transform-origin: center;
-  }
+    transform: perspective(1000px) rotateY(0deg) scale(1);
+}
 
 .flip-card-inner.flipped {
-    transform: rotateY(180deg);
+    transform: perspective(1000px) rotateY(0deg) scale(1);
+    backface-visibility: hidden;
 }
 
 #profilepic, #profilepicreversed {
     position: absolute;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
     object-fit: cover;
     left: 50%;
     transform: translateX(-50%);
