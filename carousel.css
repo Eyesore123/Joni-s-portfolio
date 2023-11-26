@@ -24,6 +24,8 @@
     width: 100vw;
     height: 400px;
     margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .carousel > img {

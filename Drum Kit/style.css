@@ -47,14 +47,10 @@ html {
     background-color: rgb(214, 199, 199);
 }
 
-p, li {
-    
-    margin-bottom: 20px;
-}
-
 p {
     text-align: justify;
     width: 1402px;
+    margin-bottom: 20px;
 }
 
 ul {
@@ -74,6 +70,7 @@ ul, ol, li {
 li {
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #profilepic {
@@ -215,7 +212,6 @@ footer {
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: aqua;
-    font-size: 15px;
     border: 2px solid black;
     padding: 10px 10px;
     transition: 0s;
