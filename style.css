@@ -424,3 +424,54 @@ button {
     background-color: white;
     border-radius: 50%;
 }
+
+#picture-text {
+    position: absolute;
+    top: 63%;
+    right: 30px;
+    font-size: 18px;
+    color: white;
+    z-index: 1;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: black;
+    animation: pulse 3.5s infinite;
+    animation-delay: 2s;
+}
+
+@media (min-width: 681px) {
+    #picture-text {
+        display: none;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        color: white;    
+    }
+
+    15% {
+        color: white;
+    }
+
+    35% {
+        transform: scale(1.2);
+        color: aqua;
+    }
+
+    75% {
+        color: white
+    }
+
+    95% {
+        color: white;
+    }
+
+    100% {
+        transform: scale(1);
+        color: white
+        
+    }
+}
+

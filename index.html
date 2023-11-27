@@ -21,6 +21,7 @@
 
         <div class="flip-card-container" name="container" id="container">
             <div class="flip-card-inner">
+                <div id="picture-text">Tap here!</div>
                 
                 <div class="profilepic">
             
@@ -99,15 +100,33 @@
     <script src="index.js" charset="utf-8"></script>
     <script>
     // Get all elements with the class 'flip-trigger'
-    var flipTriggers = document.querySelectorAll('.flip-trigger');
+var flipTriggers = document.querySelectorAll('.flip-trigger');
+var pictureText = document.getElementById("picture-text");
 
-    // Add a click event listener to each trigger
-    flipTriggers.forEach(function (trigger) {
-        trigger.addEventListener('click', function () {
-            // Toggle the 'flipped' class on the closest '.flip-card-inner' element
-            this.closest('.flip-card-inner').classList.toggle('flipped');
-        });
+// Add a click event listener to each trigger
+flipTriggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+        // Toggle the 'flipped' class on the closest '.flip-card-inner' element
+        this.closest('.flip-card-inner').classList.toggle('flipped');
+        
+        // Toggle the 'flipped' class on #picture-text
+        pictureText.classList.toggle('flipped');
+
+        document.getElementById("picture-text").style.display = "none";
     });
+});
+
+// Add click event listener to #picture-text to toggle the class
+pictureText.addEventListener('click', function () {
+    // Toggle the 'flipped' class on the closest '.flip-card-inner' element
+    this.closest('.flip-card-inner').classList.toggle('flipped');
+    
+    // Toggle the 'flipped' class on #picture-text
+    this.classList.toggle('flipped');
+
+    document.getElementById("picture-text").style.display = "none";
+});
+
     </script>
 </body>
 </html>
