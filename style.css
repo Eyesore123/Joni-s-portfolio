@@ -41,7 +41,7 @@ body {
 
 
 #canvas {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -6;
@@ -287,6 +287,16 @@ li {
     }
     #profilepic {
         width: 270px;
+    }
+
+    #canvas {
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        max-width: 450px;
+        width: auto;
     }
     
 }
