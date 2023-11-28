@@ -20,10 +20,18 @@ body {
     margin-bottom: 50px;
     margin-left: 200px;
     margin-right: 200px;
-    border: 1px solid black;
     padding: 20px 100px;
     z-index: 0;
     overflow: hidden;
+}
+
+#container1, #container2, #container3, .ingress, #container7 {
+    
+    border: 1px solid black;
+}
+
+.border {
+    border: none;
 }
 
 /* Exclude certain elements from borderbox */
@@ -42,7 +50,7 @@ body {
 
 .content {
     position: relative;
-    z-index: 3;
+    z-index: 10;
     line-height: 1.3;
     /* Add other styles for your content container here */
 }
@@ -88,6 +96,7 @@ p, li {
 p {
     text-align: justify;
     width: 1402px;
+    background-color: rgb(214, 199, 199);
 }
 
 ul {
