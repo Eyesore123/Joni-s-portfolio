@@ -1,18 +1,48 @@
 body {
     width: auto;
+    height: 100vh;
 }
+
+/* Apply to all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+#container1, #container2, #container3, .ingress, #container7 {
+    
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 1px solid black;
+    padding: 20px 100px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Exclude certain elements from borderbox */
+#to-do-list {
+    box-sizing: content-box;
+}
+
 
 #canvas {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -6;
     animation-duration: 9999999999999s;
 }
 
 .content {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     line-height: 1.3;
     /* Add other styles for your content container here */
 }
@@ -144,20 +174,6 @@ li {
     padding-bottom: 0;
     margin-bottom: 0;
   }
-
-#container1, #container2, #container3, .ingress, #container7 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
-    border: 1px solid black;
-    padding: 20px 100px;
-}
 
 .something {
     text-align: center;
@@ -427,15 +443,15 @@ button {
 
 #picture-text {
     position: absolute;
-    top: 63%;
+    top: 53%;
     right: 30px;
     font-size: 18px;
     color: white;
     z-index: 1;
     border-radius: 50%;
     padding: 10px;
-    background-color: black;
-    animation: pulse 3.5s infinite;
+    background-color: yellowgreen;
+    animation: pulse 4.0s infinite;
     animation-delay: 2s;
 }
 
@@ -448,30 +464,28 @@ button {
 @keyframes pulse {
     0% {
         transform: scale(1);
-        color: white;    
+        color: black;    
     }
 
     15% {
-        color: white;
+        color: black;
     }
 
-    35% {
+    40% {
+        color: aqua;
+    }
+
+    50% {
         transform: scale(1.2);
         color: aqua;
     }
 
     75% {
-        color: white
-    }
-
-    95% {
-        color: white;
+        color: black
     }
 
     100% {
         transform: scale(1);
-        color: white
-        
+        color: black  
     }
 }
-
