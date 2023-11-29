@@ -345,6 +345,7 @@ hr {
     height: 5px;
     background-color: aqua;
     width: 100%;
+    border-color: aqua;
 }
 
 footer {
