@@ -1,0 +1,119 @@
+/* @keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+@keyframes opacityChange {
+	50% {
+		opacity:.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.border {
+	position: relative;
+	z-index: 15;
+	width: 400px;
+	height: 300px;
+	margin: 20px;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+    
+	
+    &::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-image: conic-gradient(transparent, rgba(168, 239, 255, 1), transparent 30%);
+		animation: rotate 4s linear infinite;
+        border-radius: 10px;
+	}
+	
+        
+    &::after {
+            content: '';
+            position: absolute;
+            z-index: -6;
+            left: 6px;
+            top: 6px;
+            width: calc(100% - 12px);
+            height: calc(100% - 12px);
+            border-radius: 5px;
+            box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+        }
+    }
+    
+
+
+    div.content.border {
+    z-index: 14;
+    background-color: rgb(214, 199, 199);
+    }
+
+     */
+
+     .border {
+
+        position: relative;
+        
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 5px solid aqua;
+            transition: all .5s;
+            animation: clippath 6s infinite linear reverse;
+        }
+
+        &::after {
+            animation: clippath 6s infinite -3.0s linear reverse;
+        }
+    }
+    
+
+    @keyframes clippath {
+        0%,
+        100% {
+            clip-path: inset(0 0 98% 0);  
+        }
+        
+        25% {
+            clip-path: inset(0 98% 0 0);
+        }
+        50% {
+            clip-path: inset(98% 0 0 0);
+        }
+        75% {
+            clip-path: inset(0 0 0 98%);
+        }
+    }
+
+    #container8 {
+    
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 200px;
+        margin-right: 200px;
+        padding: 20px 100px;
+
+    }
