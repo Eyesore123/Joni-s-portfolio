@@ -518,10 +518,10 @@ button {
 
 .hat-container {
     position: absolute;
-    top: -13%;
+    top: -12%;
     left: -30px;
     z-index: 35;
-    rotate: 38deg;
+    rotate: 35deg;
 }
 
 .hat-image {
@@ -534,10 +534,10 @@ button {
     
     .hat-container {
         position: absolute;
-        top: -10%;
+        top: -9%;
         left: -35px;
         z-index: 35;
-        rotate: 40deg;
+        rotate: 36deg;
     }
     
     .hat-image {
@@ -554,7 +554,7 @@ button {
         top: -9%;
         left: -40px;
         z-index: 35;
-        rotate: 40deg;
+        rotate: 36deg;
     }
     
     .hat-image {
