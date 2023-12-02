@@ -512,3 +512,59 @@ button {
         color: black  
     }
 }
+
+
+/* Only during christmas season:  */
+
+.hat-container {
+    position: absolute;
+    top: -15%;
+    left: -30px;
+    z-index: 35;
+    rotate: 40deg;
+}
+
+.hat-link {
+    display: inline-block;
+    position: relative;
+}
+
+.hat-image {
+    width: 10%;
+    height: auto;
+    min-width: 180px;
+}
+
+@media (min-width: 681px) {
+    
+    .hat-container {
+        position: absolute;
+        top: -10%;
+        left: -35px;
+        z-index: 35;
+        rotate: 40deg;
+    }
+    
+    .hat-image {
+    width: 250px;
+    height: auto;
+    min-width: 200px;
+    }
+}
+
+@media (min-width: 1500px) {
+    
+        .hat-container {
+        position: absolute;
+        top: -9%;
+        left: -40px;
+        z-index: 35;
+        rotate: 40deg;
+    }
+    
+    .hat-image {
+    width: 300px;
+    height: auto;
+    min-width: 200px;
+    }
+}
