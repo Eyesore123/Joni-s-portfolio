@@ -20,25 +20,42 @@
 afawfawfawfawfawfawfawfawfawfawfawf
     </div>
 
+    <h2>Meme Generator</h2>
 
-    
+        <div class="smiley" onclick="submitForm()">
+            <img id="smileyface" src="/Assets/Images/smiley.png" alt="smileyface" width="300px">
+            <form id="form" action="/gimme" method="POST" style="display: none;">
+                <button type="submit"></button>
 
-    <div id="container8" class="content border" name="container">
+            </form>
+        </div>
+      
+ <%- include("footer.ejs") %>  
 
-        <img id="est" src="/Assets/Images/joni.jpg"
-        width="300">
-    </div>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
 
+        // Function to fetch a random meme pic and submit the form
+    async function submitForm() {
+        try {
+        const response = await axios.get("https://meme-api.com/gimme");
+        const randomMeme = response.data.url;
 
-   
+        // Update the src attribute of the img tag with the random meme URL
+        document.getElementById("smileyface").src = randomMeme;
 
-    <div id="container8" class="content border" name="container">
+        // Delay the form submission for 200 seconds (adjust as needed)
+        setTimeout(() => {
+            // Submit the form
+            document.getElementById("form").submit();
+        }, 200000);
 
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-    </div>
-        
- <%- include('footer.ejs') %>  
-
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="index.js" charset="utf-8"></script>
    
