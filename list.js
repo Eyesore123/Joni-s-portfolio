@@ -46,10 +46,15 @@ function newElement() {
         document.getElementById("to-do-list").appendChild(li);
     }
     document.getElementById("someInput").value = "";
-    
+
     var span = document.createElement("span");
     var cross = document.createTextNode("\u274C");
     span.className = "close";
     span.appendChild(cross);
     li.appendChild(span);
+
+    // Add event listener to the new list item
+    li.addEventListener("click", function() {
+        this.classList.toggle("checked");
+    });
 }
