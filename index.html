@@ -12,9 +12,95 @@
 
     <canvas id="canvas"></canvas>
     <div class="content">
+    
+<!-- For a popup window -->
+    
+        <div class="popup-wrapper">
+        <div class="popup">
+            <div class=" popup-close">X</div>
+                <div class="popup-content" style="font-size: 35px;">
+                    I don't use cookies<div style="font-size: 35px;">(except for this popup),</div> and I don't store your data in any way, shape or form!<br><br>
+                    <button class="popup-button" style="font-size: 20px; font-weight: bold; text-shadow: 1px 1px black;">Got it!</button>
+                </div>
+        </div>
+    </div>
+
+    <script>
+
+        const popup = document.querySelector('.popup');
+        const popupClose = document.querySelector('.popup-close'); //close
+        const popupWrapper = document.querySelector('.popup-wrapper');
+        const popupButton = document.querySelector('.popup-button');
+
+        setTimeout(() => {
+            popupWrapper.style.display = 'flex'; 
+            popup.style.display = 'flex';
+        }, 2000);
+
+        popupClose.addEventListener('click', () => {
+            popupWrapper.style.display = 'none';
+        });
+
+        popupButton.addEventListener('click', () => {
+            popupWrapper.style.display = 'none';
+        });
+
+        // Function to get a cookie value
+    function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+    }
+
+    // Function to set a cookie value
+    function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+
+    // Check if the popup has been triggered before
+    if (getCookie('popupTriggered') !== 'true' && getCookie('popupTriggered') !== null) {
+    // Trigger the popup
+    wheelDownTriggered = true;
+    // Set the cookie to expire in 1 day
+    document.cookie = 'popupTriggered=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+    }
+
+    // Alternative way to store the value using local storage
+    // if (localStorage.getItem('popupTriggered') !== 'true') {
+    //   // Trigger the popup
+    //   wheelDownTriggered = true;
+    //   // Set the value in local storage
+    //   localStorage.setItem('popupTriggered', 'true');
+    // }
+
+    // Function to clear the cookie
+    function clearCookie(name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
+    }
+
+    // Function to clear the local storage value
+    // function clearLocalStorage(name) {
+    //   localStorage.removeItem(name);
+    // }
+
+    </script>
+
+
+    
     <h1>Joni's homepage</h1>
 
-    <h2>I'm a Sport Secretary in the municipality of Ilomantsi</h2>
+    <h2>I'm a Sports Secretary in the municipality of Ilomantsi</h2>
     <h3>(Also a front-end web developer these days)</h3>
         <br>
         

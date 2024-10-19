@@ -40,23 +40,23 @@ function draw() {
     context.fill();
   });
 
-  if (wheelDownTriggered) {
-    // Perform any necessary actions here
-    console.log("Wheel down triggered!");
-    wheelDownTriggered = false;
-  }
+  // if (wheelDownTriggered) {
+  //   // Perform any necessary actions here
+  //   console.log("Wheel down triggered!");
+  //   wheelDownTriggered = false;
+  // }
 }
 
 
-document.addEventListener('wheel', (e) => {
-  if (e.deltaY > 0) {
-    wheelDownCount++;
-    if (wheelDownCount >= 3) {
-      wheelDownTriggered = true;
-      wheelDownCount = 0;
-    }
-  }
-});
+// document.addEventListener('wheel', (e) => {
+//   if (e.deltaY > 0) {
+//     wheelDownCount++;
+//     if (wheelDownCount >= 3) {
+//       wheelDownTriggered = true;
+//       wheelDownCount = 0;
+//     }
+//   }
+// });
 
 // Initialize canvas and start draw loop
 draw();
