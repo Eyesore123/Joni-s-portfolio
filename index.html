@@ -15,62 +15,63 @@
     
 <!-- For a popup window -->
     
-        <div class="popup-wrapper">
+    <div class="popup-wrapper" style="display: none;">
         <div class="popup">
-            <div class=" popup-close">X</div>
-                <div class="popup-content" style="font-size: 35px;">
-                    I don't use cookies<div style="font-size: 35px;">(except for this popup),</div> and I don't store your data in any way, shape or form!<br><br>
-                    <button class="popup-button" style="font-size: 20px; font-weight: bold; text-shadow: 1px 1px black;">Got it!</button>
-                </div>
+            <div class="popup-close">X</div>
+            <div class="popup-content" style="font-size: 35px;">
+                I don't use cookies<div style="font-size: 35px;">(except for this popup),</div> and I don't store your data in any way, shape or form!<br><br>
+                <button class="popup-button" style="font-size: 20px; font-weight: bold; text-shadow: 1px 1px black;">Got it!</button>
+            </div>
         </div>
     </div>
 
     <script>
+    // Function to get a cookie value
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
 
-        const popup = document.querySelector('.popup');
-        const popupClose = document.querySelector('.popup-close'); //close
+    // Function to show the popup
+    function showPopup() {
         const popupWrapper = document.querySelector('.popup-wrapper');
-        const popupButton = document.querySelector('.popup-button');
+        const popup = document.querySelector('.popup');
+        popupWrapper.style.display = 'flex'; 
+        popup.style.display = 'flex'; 
+    }
 
+    // Check if the popup has been triggered before
+    if (getCookie('popupTriggered') === null || getCookie('popupTriggered') !== 'true') {
+        // Show the popup after a delay
         setTimeout(() => {
-            popupWrapper.style.display = 'flex'; 
-            popup.style.display = 'flex';
+            showPopup();
         }, 2000);
 
-        popupClose.addEventListener('click', () => {
-            popupWrapper.style.display = 'none';
-        });
+        // Set the cookie to indicate that the popup has been triggered
+        document.cookie = 'popupTriggered=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+    }
 
-        popupButton.addEventListener('click', () => {
-            popupWrapper.style.display = 'none';
-        });
+    // Close popup when close button or 'Got it' button is clicked
+    const popupClose = document.querySelector('.popup-close');
+    const popupButton = document.querySelector('.popup-button');
+    const popupWrapper = document.querySelector('.popup-wrapper');
 
-    // Function to get a cookie value
-function getCookie(name) {
-  var nameEQ = name + "=";
-  var ca = document.cookie.split(';');
-  for(var i=0;i < ca.length;i++) {
-    var c = ca[i];
-    while (c.charAt(0)==' ') c = c.substring(1,c.length);
-    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-  }
-  return null;
-}
+    popupClose.addEventListener('click', () => {
+        popupWrapper.style.display = 'none';
+    });
 
-// Check if the popup has been triggered before
-if (getCookie('popupTriggered') === null || getCookie('popupTriggered') !== 'true') {
-  // Trigger the popup
-  setTimeout(() => {
-    document.querySelector('.popup-wrapper').style.display = 'flex'; 
-    document.querySelector('.popup').style.display = 'flex';
-  }, 2000);
+    popupButton.addEventListener('click', () => {
+        popupWrapper.style.display = 'none';
+    });
 
-  // Set the cookie to indicate that the popup has been triggered
-  document.cookie = 'popupTriggered=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
-}
+</script>
 
-
-    </script>
 
 
     
