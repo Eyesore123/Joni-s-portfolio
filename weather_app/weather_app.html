@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sää</title>
+</head>
+<body>
+
+  <div class="container my-5 mx-auto">
+    <h1 class="text-muted text-center my-4">Sää</h1>
+      <form action="" class="change-location my-4 text-center text-muted">
+        <label for="city">Kirjoita paikkakunta säätietojen hakemiseksi</label>
+        <input type="text" name="city" id="city" class="form-control p-4" placeholder="Esim. Helsinki">
+      </form>
+    
+      <div class="card shadow-lg rounded d-none">
+        <a href="https://placehold.co/"></a>
+        <img src="https://placehold.co/600x400?text=kuva&font=Montserrat" alt="placeholder image" class="time card-img-top">
+        <div class="icon bg-light mx-auto text-center">
+          <!-- icon will be added here -->
+          <img src="" alt="weather icon">
+        </div>
+        <div class="text-muted text-uppercase text-center details">
+          <h5 class="my-3">Paikkakunta</h5>
+          <div class="my-3"> Keli
+            <!-- Weather condition will be added here -->
+          </div>
+          <div class="display-4 my-4">
+            <span>Lämpötila</span>
+            <span>°C</span>
+            <!-- Temperature will be added here -->
+          </div>
+        </div>
+      </div>
+
+  </div>
+  
+  <script src="scripts/forecast.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
