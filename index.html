@@ -26,59 +26,68 @@
     </div>
 
     <script>
-    // Function to get a cookie value
-    function getCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        // Function to get a cookie value
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
         }
-        return null;
-    }
-
-    // Function to show the popup
-    function showPopup() {
+        
+        // Function to set a cookie with an expiration date
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // days * hours * minutes * seconds * milliseconds
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+        
+        // Function to show the popup
+        function showPopup() {
+            const popupWrapper = document.querySelector('.popup-wrapper');
+            const popup = document.querySelector('.popup');
+            popupWrapper.style.display = 'flex'; 
+            popup.style.display = 'flex'; 
+        }
+        
+        // Check if the popup has been triggered before
+        if (getCookie('popupTriggered') === null || getCookie('popupTriggered') !== 'true') {
+            // Show the popup after a delay
+            setTimeout(() => {
+                showPopup();
+            }, 2000);
+        
+            // Set the cookie to expire after 24 hours (1 day)
+            setCookie('popupTriggered', 'true', 1); // 1 day
+        }
+        
+        // Close popup when close button or 'Got it' button is clicked
+        const popupClose = document.querySelector('.popup-close');
+        const popupButton = document.querySelector('.popup-button');
         const popupWrapper = document.querySelector('.popup-wrapper');
-        const popup = document.querySelector('.popup');
-        popupWrapper.style.display = 'flex'; 
-        popup.style.display = 'flex'; 
-    }
-
-    // Check if the popup has been triggered before
-    if (getCookie('popupTriggered') === null || getCookie('popupTriggered') !== 'true') {
-        // Show the popup after a delay
-        setTimeout(() => {
-            showPopup();
-        }, 2000);
-
-        // Set the cookie to indicate that the popup has been triggered
-        document.cookie = 'popupTriggered=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
-    }
-
-    // Close popup when close button or 'Got it' button is clicked
-    const popupClose = document.querySelector('.popup-close');
-    const popupButton = document.querySelector('.popup-button');
-    const popupWrapper = document.querySelector('.popup-wrapper');
-
-    popupClose.addEventListener('click', () => {
-        popupWrapper.style.display = 'none';
-    });
-
-    popupButton.addEventListener('click', () => {
-        popupWrapper.style.display = 'none';
-    });
-
-</script>
-
-
-
+        
+        popupClose.addEventListener('click', () => {
+            popupWrapper.style.display = 'none';
+        });
+        
+        popupButton.addEventListener('click', () => {
+            popupWrapper.style.display = 'none';
+        });
+        
+        </script>
+        
     
-    <h1>Joni's homepage</h1>
+    <h1>Joni's homepage</h1><br><br><br>
 
-    <h2>I'm a Sports Secretary in the municipality of Ilomantsi</h2>
-    <h3>(Also a front-end web developer these days)</h3>
+    <!--<h2>I'm a Sports Secretary in the municipality of Ilomantsi</h2> -->
+    <!-- <h3>(Also a front-end web developer these days)</h3> -->
         <br>
         
         
@@ -94,11 +103,11 @@
                     />   
                     
 
-                  <!-- Only during christmas season: 
+                  <!-- Only during christmas season: -->
                 <div class="hat-container">
                         <img src="./Assets/Images/santa-hat-1087651_1280.png" class="hat-image" alt="hat">
                 </div>
-               Only during christmas season:   -->
+                <!--Only during christmas season: -->
 
                 </div>
                 <div class="profilepicreversed">
@@ -121,7 +130,7 @@
             CV
         </a>
         <br />
-        (Opens up pdf-file in browser for a preview)
+        (Opens up a pdf-file in browser for preview)
 
         <br>
         <br><br>
