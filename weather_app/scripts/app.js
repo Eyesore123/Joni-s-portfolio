@@ -3,6 +3,7 @@ const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img');
+const forecast = new Forecast();
 
 const updateUI = (data) => {
 
@@ -49,13 +50,13 @@ const updateUI = (data) => {
 };
 
 
-const updateCity = async (city) => {
-    const cityDetails = await getCity(city);
-    const weather = await getWeather(cityDetails.Key);
+// const updateCity = async (city) => {
+//     const cityDetails = await getCity(city);
+//     const weather = await getWeather(cityDetails.Key);
 
-    //Update UI with new city
-    return {cityDetails: cityDetails, weather: weather};
-};
+//     //Update UI with new city
+//     return {cityDetails: cityDetails, weather: weather};
+// };
 
 cityForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -65,7 +66,7 @@ cityForm.addEventListener('submit', (e) => {
     cityForm.reset();
 
     //Update UI with new city, use .then method to parse the data from promise
-    updateCity(city)
+    forecast.updateCity(city)
     .then(data => updateUI(data))
     .catch(err => console.log(err));
 
@@ -75,7 +76,7 @@ cityForm.addEventListener('submit', (e) => {
 });
 
 if (localStorage.getItem('city')) {
-    updateCity(localStorage.getItem('city'))
+    forecast.updateCity(localStorage.getItem('city'))
     .then(data => updateUI(data))
     .catch(err => console.log(err));
 };
