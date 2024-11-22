@@ -408,7 +408,8 @@ span.addBtn {
     padding: 4px;
     border: 2px solid;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     float: left;
     background-color: aqua;
