@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/x-icon" href="./Assets/Images/favicon.png">
+    <title>Projects</title>
+    <style>
+        .certificate:hover {
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .certificate {
+                width: 100%;
+            }
+        }
+
+        img {
+            position: relative;
+            z-index: 1;
+        }
+
+        img.clicked {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="content">
+    <h1>
+        Projects
+    </h1>
+    
+    <div id="container7" class="content" name="container">
+
+        <h2>
+        Certificates
+        </h2>
+        <div class="center-text" style="text-align: center">
+            <br><br>
+            <button class="certificate-button">
+            <img src="./Assets/Images/UC-29c05720-b757-4087-b95e-bfb9116fa311.jpg" width="500px" class="certificate"> 
+            </button>
+            </div>
+       </div>
+
+
+    </div>
+
+   
+
+    <div class="center-text">
+        <a href="index.html">
+            Previous page
+        </a>
+        </div>
+        </p>
+        <hr />
+        <footer>
+        <br>
+        <div style="text-align:center">
+            <strong>Copyright © 2024 Joni Putkinen. All Rights Reserved.</strong>
+        </div>
+        <br>
+     </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js" charset="utf-8"></script>
+    <script src="list.js" charset="utf-8"></script>
+    <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+  const img = document.querySelector('.certificate');
+
+  img.addEventListener('click', () => {
+    if (img.classList.contains('clicked')) {
+      img.classList.remove('clicked');
+      const closeButton = document.querySelector('.close-button');
+      if (closeButton) {
+        closeButton.remove();
+      }
+    } else {
+      img.classList.add('clicked');
+      const closeButton = document.createElement('button');
+      closeButton.textContent = 'Close';
+      closeButton.classList.add('close-button');
+      document.body.appendChild(closeButton);
+    }
+  });
+});
+
+    </script>
+</body>
+</html>
