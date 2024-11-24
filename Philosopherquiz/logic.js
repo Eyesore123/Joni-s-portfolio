@@ -113,16 +113,16 @@ function getImageSrc(step) {
     // Return the image source based on the step
 
     const imageSources = {
-        1: 'images/kierkegaard.jpg',
-        2: 'images/heraclitus.jpg',
-        3: 'images/protagoras.jpg',
-        4: 'images/sartre.jpg',
-        5: 'images/aristotle.jpg',
-        6: 'images/epicurus.jpg',
-        7: 'images/heraclitus.jpg',
-        8: 'images/schopenhauer.jpg',
-        9: 'images/nietzsche.jpg',
-        10: 'images/james.jpg'
+        1: 'Images/kierkegaard.jpg',
+        2: 'Images/heraclitus.jpg',
+        3: 'Images/protagoras.jpg',
+        4: 'Images/sartre.jpg',
+        5: 'Images/aristotle.jpg',
+        6: 'Images/epicurus.jpg',
+        7: 'Images/heraclitus.jpg',
+        8: 'Images/schopenhauer.jpg',
+        9: 'Images/nietzsche.jpg',
+        10: 'Images/james.jpg'
       };
     
       return imageSources[step];
