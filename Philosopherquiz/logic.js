@@ -1,4 +1,4 @@
-const preloadImages = [
+const imagesToPreload = [
     'Images/kierkegaard.jpg',
     'Images/heraclitus.jpg',
     'Images/protagoras.jpg',
@@ -12,9 +12,9 @@ const preloadImages = [
 ]
 
 function preloadImages() {
-    preloadImages.forEach(imageSrc => {
+    imagesToPreload.forEach(src => {
         const img = new Image();
-        img.src = imageSrc;
+        img.src = src;
     });
 }
 
