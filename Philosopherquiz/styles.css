@@ -30,7 +30,7 @@ img {
 
 .img-fluid {
     max-width: 1500px;
-    max-height: 600px;
+    max-height: 500px;
     height: auto;
 }
 
@@ -86,7 +86,7 @@ img {
 /* Feedback section styling */
 
 .feedback {
-    margin-top: 110px;
+    margin-top: 90px;
     font-size: 1.4rem;
     font-weight: bold;
     color: #007bff;
