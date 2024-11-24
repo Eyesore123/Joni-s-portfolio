@@ -1,0 +1,176 @@
+#canvas {
+    background-image: url('Images/philosophers.jpg');
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    opacity: 0.19;
+}
+
+h1 {
+    color:blue;
+    text-align: center;
+}
+
+p {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    font-size: 23px;
+    max-width: 1000px;
+}
+
+img {   
+
+    display: block;
+    padding: 4%;
+}
+
+.img-fluid {
+    max-width: 1500px;
+    max-height: 600px;
+    height: auto;
+}
+
+.form-step {
+    display: none;
+    display: flex;  /* Use Flexbox */
+    flex-direction: column;  /* Stack the elements vertically */
+    justify-content: center;  /* Vertically center the content */
+    align-items: center;  /* Horizontally center the content */
+    text-align: center;  /* Ensure text is centered */
+    height: 100%;  /* Make sure it takes full height of its container */
+    padding: 50px 50px;  /* Add padding for spacing */
+    box-sizing: border-box;  /* Include padding in width calculation */
+}
+
+.form-step h2 {
+    padding-top: 2%;
+    padding-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+
+.feedback img {
+    padding: 8%;
+    padding-bottom: 0 !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.form-step button {
+    margin-top: 5%;
+    padding: 10px 20px;
+    font-size: 17px;
+    letter-spacing: 0.7px;
+}
+
+#start-btn {
+    margin-top: 0;
+    padding: 10px 20px;
+    font-size: 17px;
+    letter-spacing: 0.7px;
+}
+
+.form-step input[type="radio"] {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* Feedback section styling */
+
+.feedback {
+    margin-top: 110px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #007bff;
+    max-width: 800px;
+}
+
+.feedback.correct {
+    color: green;
+}
+
+.feedback.incorrect {
+    color: red;
+}
+
+.radio-wrapper {
+    display: flex;
+    flex-direction: column; /* Aligns items vertically */
+    justify-content: center;
+    gap: 10px; /* Adds space between radio buttons */
+}
+
+.radio-wrapper label {
+    display: flex;
+    align-items: center; /* Vertically aligns radio buttons and text */
+    gap: 10px; /* Adds space between the radio button and label text */
+    padding: 5px 0; /* Padding to improve spacing */
+    margin: 0; /* Removes default margin to avoid unwanted space */
+}
+
+.radio-wrapper input[type="radio"] {
+    margin: 0; /* Removes any margin around the radio button */
+    padding: 0; /* Removes any padding inside the radio button */
+}
+
+label {
+    display: flex;
+    font-size: 21px;
+    letter-spacing: 1px;
+    align-items: center; /* Ensures vertical alignment of radio button and text */
+    justify-content: center;
+    gap: 10px; /* Adds space between radio button and label text */
+    padding: 5px 0; /* Adds vertical padding for spacing */
+    margin-bottom: 10px; /* Ensures space between each radio option */
+}
+
+#start-btn {
+    margin-bottom: 80px;
+    font-size: 17px;
+    
+}
+
+.bi {
+    font-size: 2.5rem;
+}
+
+/* Common feedback styles */
+.feedback {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Correct answer */
+.correct-answer {
+    opacity: 1;
+    animation: correctAnim 1.3s ease forwards;
+}
+
+@keyframes correctAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+/* Wrong answer */
+.wrong-answer {
+    opacity: 1;
+    animation: wrongAnim 1.3s ease forwards;
+}
+
+@keyframes wrongAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+p#final-score {
+    font-size: 6rem;
+}
