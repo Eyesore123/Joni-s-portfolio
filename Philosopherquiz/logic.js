@@ -1,5 +1,30 @@
+const preloadImages = [
+    'Images/kierkegaard.jpg',
+    'Images/heraclitus.jpg',
+    'Images/protagoras.jpg',
+    'Images/sartre.jpg',
+    'Images/aristotle.jpg',
+    'Images/epicurus.jpg',
+    'Images/heraclitus.jpg',
+    'Images/schopenhauer.jpg',
+    'Images/nietzsche.jpg',
+    'Images/james.jpg'
+]
+
+function preloadImages() {
+    preloadImages.forEach(imageSrc => {
+        const img = new Image();
+        img.src = imageSrc;
+    });
+}
+
 let score = 0;
 function startQuiz() {
+
+    // Preload images into memory
+
+    preloadImages();
+
     // Hide the landing page and show the first question only
     document.getElementById('landing-page').classList.add('d-none');
     document.getElementById('quiz-container').classList.remove('d-none');
