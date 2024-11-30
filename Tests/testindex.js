@@ -1,11 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const video = document.getElementById('videoSource');
+const video = document.getElementById('video');
+const buffer = [];
 
-  // Preload the video
-  video.preload = 'auto';
-
-  // Wait for the video to be loaded before playing it
-  video.addEventListener('canplaythrough', () => {
-    video.play();
-  });
+// Load the video frames into the buffer
+video.addEventListener('canplay', () => {
+  const interval = setInterval(() => {
+    const frame = video.currentTime * video.frameRate;
+    buffer.push(frame);
+    if (buffer.length >= video.duration * video.frameRate) {
+      clearInterval(interval);
+    }
+  }, 1000 / video.frameRate);
 });
+
+// Render the video frames from the buffer
+function render() {
+  const frame = buffer.shift();
+  if (frame) {
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    requestAnimationFrame(render);
+  }
+}
+
+render();
