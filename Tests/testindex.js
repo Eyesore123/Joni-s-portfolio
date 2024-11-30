@@ -1,4 +1,4 @@
-const video = document.getElementById('video');
+const video = document.getElementById('videoSource');
 const buffer = [];
 const bufferLength = 5; // Increase the buffer length to 10 seconds
 

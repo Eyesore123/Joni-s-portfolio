@@ -9,18 +9,21 @@
 </head>
 <body>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const videoSource = document.querySelector('#videoSource');
+            const video = document.createElement('video');
+            video.src = './Assets/insta.mp4';
+            video.type = 'video/mp4';
+            videoSource.appendChild(video);
+          });
+    </script>
+
     <canvas id="videoCanvas"></canvas>
     <video class="video" id="videoSource" autoplay loop muted playsinline>
         <source src="./Assets/insta.mp4" type="video/mp4">
     </video>
 
-    <video class="video hidden-video" id="videoSource2" autoplay loop muted playsinline>
-        <source src="./Assets/insta.mp4" type="video/mp4">
-    </video>
-
-    <video class="video hidden-video" id="videoSource3" autoplay loop muted playsinline>
-        <source src="./Assets/insta.mp4" type="video/mp4">
-    </video>
 
     <div class="content">
         <h1 class="title">
