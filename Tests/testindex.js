@@ -1,12 +1,13 @@
-const video = document.getElementById('videoSource');
+const video = document.getElementById('video');
 const buffer = [];
+const bufferLength = 5; // Increase the buffer length to 10 seconds
 
 // Load the video frames into the buffer
 video.addEventListener('canplay', () => {
   const interval = setInterval(() => {
     const frame = video.currentTime * video.frameRate;
     buffer.push(frame);
-    if (buffer.length >= video.duration * video.frameRate) {
+    if (buffer.length >= bufferLength * video.frameRate) {
       clearInterval(interval);
     }
   }, 1000 / video.frameRate);
