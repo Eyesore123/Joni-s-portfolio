@@ -1,14 +1,18 @@
-const canvas = document.getElementById('videoCanvas');
-const ctx = canvas.getContext('2d');
-const video = document.getElementById('videoSource');
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById('videoCanvas');
+  const ctx = canvas.getContext('2d');
+  const video = document.getElementById('videoSource');
 
-video.addEventListener('loadedmetadata', () => {
+  // Initialize the canvas and video here
   canvas.width = video.videoWidth;
   canvas.height = video.videoHeight;
 
-  // Preload the canvas by drawing the first frame
-  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-  // Start playing the video
-  video.play();
+  video.addEventListener('play', () => {
+    // Start rendering the video to the canvas here
+    function render() {
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      requestAnimationFrame(render);
+    }
+    render();
+  });
 });
