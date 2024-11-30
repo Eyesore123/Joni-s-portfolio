@@ -6,7 +6,7 @@ let wave1 = {
     frequency: 0.02,
     phase: 1.5 * Math.PI,
     speed: 0.002,
-    color: 'rgba(0, 123, 255, 0.4)' // Blueish
+    color: 'rgba(0, 123, 255, 0.3)' // Blueish
 };
 
 let wave2 = {
@@ -14,7 +14,7 @@ let wave2 = {
     frequency: 0.03,
     phase: Math.PI / 2, // Starting 90 degrees out of phase from wave1
     speed: 0.001,
-    color: 'rgba(147, 0, 169, 0.4)' // Redish
+    color: 'rgba(147, 0, 169, 0.3)' // Redish
 };
 
 let wave3 = {
@@ -22,7 +22,7 @@ let wave3 = {
     frequency: 0.02,
     phase: 1.3 * Math.PI,
     speed: 0.002,
-    color:'rgba(11, 156, 49, 0.4)' // greenish
+    color:'rgba(11, 156, 49, 0.3)' // greenish
 };
 
 function drawWave(wave) {
