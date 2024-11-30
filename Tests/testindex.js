@@ -1,4 +1,4 @@
-const video = document.getElementById('video');
+const video = document.getElementById('videoSource');
 const buffer = [];
 
 // Load the video frames into the buffer
