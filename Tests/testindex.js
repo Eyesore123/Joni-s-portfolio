@@ -1,6 +1,6 @@
 const video = document.getElementById('videoSource');
 const buffer = [];
-const bufferLength = 5; // Increase the buffer length to 10 seconds
+const bufferLength = 5; // Increase the buffer length to 5 seconds
 
 // Load the video frames into the buffer
 video.addEventListener('canplay', () => {
