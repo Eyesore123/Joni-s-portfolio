@@ -248,11 +248,8 @@ li {
 /* test */
 
 
-/* sidebar */
 
 /* media queries */
-
-/* Small devices  */
 
 @media only screen and (max-width: 768px) {
     
@@ -261,10 +258,12 @@ li {
         display: flex;
         justify-content: center;
         align-items: center;
-    }   
+        padding: 10px;
+    }
 
-    .contact-info p, .legal-info p {
-        font-size: 16px;
+    .contact-info p {
+        font-size: 20px;
+        display: inline-block;
     }
 
     .image-container {
@@ -293,6 +292,7 @@ li {
         line-height: 1.2;
     }
 
+
 }
 
 .footer-container {
@@ -312,17 +312,22 @@ li {
     margin-bottom: 10px;
 }
 
+div.legal-info p {
+    font-size: 18px !important;
+}
+
 /* Footer */
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    line-height: 1.5;
+    padding: 50px;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .erikoistarjous {
         max-width: 90%; /* Reduce width for smaller screens */
         transform: translateX(0); /* Ensure it starts within the viewport */
@@ -337,3 +342,28 @@ footer {
         }
     }
 }
+
+
+/* For the on-top structure of the footer. Delete this if you want the legal info
+be to the right of the contact info */
+
+    div.footer-container {
+        flex-direction: column;
+    }
+    .contact-info,
+    .legal-info {
+        width: 100%;
+    }
+
+    .contact-info {
+        order: 1;
+    }
+
+    .legal-info {
+        order: 2;
+    }
+
+    div.legal-info {
+        border-top: #2D2D2D 1px solid;
+        margin-top: 50px;
+    }

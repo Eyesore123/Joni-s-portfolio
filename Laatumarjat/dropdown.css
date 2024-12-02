@@ -34,9 +34,10 @@ div.trigger{
 
 @media only screen and (max-width: 768px) {
   .dropdown .answer p{
+    justify-content: center !important;
     text-align: center !important;
     font-size: 12px;
-    max-width: 220px;
+    width: 300px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -53,7 +54,5 @@ div.trigger{
     align-items: center;
     text-align: center;
   }
-
-  
 
 }
