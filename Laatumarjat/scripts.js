@@ -80,9 +80,9 @@ window.addEventListener('scroll', function() {
     var screenPosition = window.innerHeight;
     const screenWidth = window.innerWidth; // Get the screen width
 
-    let formFadeThreshold = screenWidth === 2560 ? screenPosition - 500 : screenPosition - 400; // Adjust fade-in sooner for 1440p
+    let formFadeThreshold = screenWidth === 2560 ? screenPosition - 500 : screenPosition - 400; //
 
-    if (formPosition < formFadeThreshold) {  // Fade-in sooner
+    if (formPosition < formFadeThreshold) {
         form.classList.add('visible');
     }
 });
