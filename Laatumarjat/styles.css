@@ -132,7 +132,7 @@ button:hover {
 .slide-in-left {
     opacity: 0;
     transform: translateX(-100%);
-    transition: opacity 1.4s ease-out, transform 1.2s ease-in-out;
+    transition: opacity 1.4s ease-out, transform 1s ease-in-out;
 }
 
 .slide-in-right {
