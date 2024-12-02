@@ -30,8 +30,8 @@ document.addEventListener('scroll', function () {
     const screenWidth = window.innerWidth; // Get the screen width
 
     // Adjust based on screen width (1440p vs others)
-    let upperSlideThreshold = screenWidth === 2560 ? windowHeight - 700 : windowHeight - 550; // For 1440p
-    let contentSlideThreshold = screenWidth === 2560 ? windowHeight - 400 : windowHeight - 350;
+    let upperSlideThreshold = screenWidth === 2560 ? windowHeight - 700 : windowHeight - 420; // For 1440p
+    let contentSlideThreshold = screenWidth === 2560 ? windowHeight - 400 : windowHeight - 300;
 
     // Slide-in effect for upper sliders (with delayed animation)
     upperSliders.forEach(slider => {
