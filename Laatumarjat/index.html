@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Laatumarjat.fi</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="dropdown.css">
+</head>
+<body>
+
+    <!-- fade-in animation for form --> 
+    <script>
+        window.addEventListener('scroll', function() {
+            var form = document.querySelector('#contact-us form');
+            var formPosition = form.getBoundingClientRect().top;
+            var screenPosition = window.innerHeight;
+    
+            if (formPosition < screenPosition) {
+                form.classList.add('visible');
+            }
+        });
+    </script>
+    
+
+    <header class="header">
+        <h1 class="main-header">Laatumarjat.fi</h1>
+    </header>
+
+
+    
+
+
+    <section id="home" class="content-section">
+        <p class="sub-header" style="font-weight: bold;">Hanki laadukkaat kotimaiset marjat edullisesti ilman turhia välikäsiä ja säästät selvää rahaa! </p>
+    </section>
+
+    <div class="content-wrapper">
+
+        <div class="image-container">
+            <img src="./Assets/karpalot.jpg" alt="cranberries">
+        </div>
+
+        <section id="services" class="content-section upper-slider slide-in-right">
+            <h2>Marjat</h2>
+            <p>Me keräämme mustikoita, puolukoita, vadelmia, karpaloita ja pihlajanmarjoja.</p>
+        </section>
+
+        <section id="about" class="content-section lower-slider slide-in-left">
+            <h2>Palvelu</h2>
+            <p>Tarjoamme lähimetsistä kerättyjä ja käsinpoimittuja marjoja. Marjojen laatu on erinomainen, hinta erittäin edullinen.</p>
+        </section>
+
+    </div>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="content-section wipe-up whitebg">
+        <h2>Hinnat</h2>
+        <p><u>Edulliset hinnat kaikille marjoille!</u></p>
+        <ul>
+            <li>Mustikat 6 € / litra siivottuina </li>
+            <li>Mustikat 40 € / 10 litraa ilman siivousta</li>
+            <li>Vadelmat: 14 € / litra</li>
+            <li>Puolukat 4 € / litra siivottuina</li>
+            <li>Karpalot 6 € / litra siivottuina</li>
+        </ul>
+    </section>
+
+     <!-- Selling Liners Section -->
+     <section id="liners">
+        <div class="liners content-section">
+            <h2 class="erikoistarjous content-section lower-slider slide-in-right" style="background-color: rgb(217, 255, 50);">Erikoistarjous!</h2>
+            <p class="content-section lower-slider slide-in-left" style="background-color: rgb(217, 255, 50);">Mitä enemmän ostat, sitä enemmän säästät! Saat 10% alennuksen kun ostat vähintään 30 litraa (vadelmia väh. 5 litraa)</p>
+        </div>
+    </section>
+
+    <section id="qa" class="content-section qa">
+        <h2>Usein kysytyt kysymykset</h2>
+
+        <!-- dropdowns -->
+        <div class="container">
+            <div class="dropdown parent">
+                <div class="trigger">Maksutavat
+
+                </div>
+                <div class="answer">
+                    <p>Käteinen, tilisiirto, Paypal.</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Toimitus
+
+                </div>
+                <div class="answer">
+                <p>Toimitamme tarvittaessa Rantasalmen keskustaan omilla kauppareissuilla ja suurempia eriä sopimuksen mukaan myös kauemmas. Suosittelemme noutamaan marjat, jolloin voitte varata teille sopivan noutoajan.</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Marjojen laatu
+
+                </div>
+                <div class="answer">
+                <p>Marjat ovat ensiluokkaisia, mutta kooltaan vaihtelevia. Toimitamme marjat aina mahdollisimman tuoreina. Keräämme ja siivoamme marjoja kuin ne olisivat menossa omaan käyttöön. Jos marjoja jää myymättä, laitamme ne omaan pakastimeen.</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Miksi siivotut mustikat maksavat enemmän?
+
+                </div>
+                <div class="answer">
+                <p>Marjojen siivoamiseen kuluu paljon aikaa. Kun siivoaminen jää pois, on enemmän aikaa keräämiselle. Siksi haluamme kannustaa ostajia siivoamaan marjat itse.</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Onko neuvotteluvaraa?
+
+                </div>
+                <div class="answer">
+                <p>Aina on neuvotteluvaraa!</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Paljonko marjoja on saatavilla?
+
+                </div>
+                <div class="answer">
+                <p>Keräämme marjoja koko satokauden ajan. Marjojen saatavuus riippuu satokauden onnistuneisuudesta ja tilausmääristä. Kannamme marjoja metsästä sitä mukaa kuin saamme uusia tilauksia.</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Onko tämä yritystoimintaa?
+
+                </div>
+                <div class="answer">
+                <p>Ei ole. Teemme tätä rakkaudesta lajiin ja yksityishenkilöinä haluamme tarjota marjoja ostettavaksi. Marjojen ostaminen kaupasta on kallista, ja tarjoamme siihen nähden paljon edullisemman vaihtoehdon.</p>
+                </div>
+            </div>
+            <div class="dropdown parent">
+                <div class="trigger">Kuka on tehnyt nämä nettisivut?
+
+                </div>
+                <div class="answer">
+                <p>Nämä nettisivut on tehty omin voimin. Jos haluat samanlaiset tai paremmat sivut itsellesi tai yrityksellesi, voit laittaa viestiä yhteydenottolomakkeella.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact-us" class="content-section lower-slider fade-in whitebg">
+        <h2>Ota yhteyttä</h2>
+        <form action="#" method="POST">
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" class="centered-input" name="name" required>
+
+            <label for="email">Sähköpostiosoite:</label>
+            <input type="email" id="email" class="centered-input" name="email" required>
+
+            <label for="message">Viesti:</label>
+            <textarea id="message" class="centered-input" name="message" required></textarea>
+
+            <button type="submit">Lähetä viesti</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3></h3>
+                <p>Puhelinnumero: <i>0449627207</i></p>
+                <p>Sähköposti: <i>joni.putkinen@protonmail.com</i></p>
+                <p>Osoite: <i>Kankaisentie 127, 58900 Rantasalmi</i></p>
+              </div>
+            <div class="legal-info">
+                <p>&copy; 2024 Joni Putkinen.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script type="module" src="index.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

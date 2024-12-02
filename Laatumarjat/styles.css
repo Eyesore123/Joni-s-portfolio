@@ -1,0 +1,292 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #C3E6C8, #D8C5E6); /* Gradient from top-left to bottom-right */
+    color: #333;
+    min-height: 100vh;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px; /* Increased padding for more space */
+    color: #333; /* Dark text color for contrast */
+    background-color: rgba(255, 255, 255, 0.65); /* Light semi-transparent background for readability */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for definition */
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Assets/IMG_20240819_110155.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 3.5em; /* Increased font size */
+    margin-bottom: 20px;
+    color: #2D2D2D; /* Darker shade for better contrast */
+}
+h2 {
+    font-size: 2em;
+    color: #2D2D2D; /* Darker shade for better contrast */
+    padding-bottom: 5px;
+    margin-bottom: 50px;
+    width: fit-content;
+    display: inline-block;
+}
+
+p {
+    font-size: 1.5em; /* Increased paragraph size for better readability */
+    margin: 20px 0px;
+}
+
+
+/* Content Sections */
+.content-section {
+    position: relative;
+    padding: 10px 10px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* General Section Styling */
+#contact-us, .whitebg {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85); /* Light background */
+}
+
+/* Heading Style */
+#contact-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When the form is visible */
+form.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+input, textarea, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #C3E6C8;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #A3D6A8;
+}
+
+
+/* Scroll Effects */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.4s ease-out, transform 1.4s ease-out;
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1.4s ease-out, transform 1.2s ease-in-out;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1.4s ease-out, transform 1.2s ease-in-out;
+}
+
+/* Wipe-up Effect */
+.wipe-up {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Apply the wipe-up effect when the section is visible */
+.wipe-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll Animation */
+.visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.sub-header {
+    padding-top: 6%;
+    padding-bottom: 9%;
+    font-size: 2em;
+    line-height: 2em;
+}
+
+ul {
+    padding-top: 50px;
+}
+
+li {
+    list-style-type: none;
+    padding-bottom: 20px;
+    font-size: 1.5em;
+
+}
+
+.centered-input {
+    text-align: center;
+}
+
+
+.image-container img {
+    padding-top: 0px;
+    max-height: 1550px;
+    max-height: 1400px;
+    margin: 0 auto;
+}
+
+/* Wrapper styling */
+
+.content-wrapper {
+    position: relative;
+    padding-top: 50px;
+    overflow: hidden;
+}
+
+/* Image for the entire wrapper */
+.image-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind the content */
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Fade out the image */
+    background-color: transparent
+}
+
+/* When the image fades out */
+.fade-out-image .image-container {
+    opacity: 0; /* Fade the image out */
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.wipe-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    padding: 100px;
+}
+
+.erikoistarjous, .qa {
+    margin-top: 100px;
+    
+}
+
+/* test */
+
+
+/* sidebar */
+
+/* media queries */
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    *, html, body {
+        max-width: 100vw;
+    }
+    
+    .footer {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+
+    .contact-info p, .legal-info p {
+        font-size: 16px;
+    };
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-info, .social-media, .legal-info {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.contact-info h3, .social-media h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
