@@ -22,7 +22,8 @@
   display: none;
 }
 .dropdown .answer.active{
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
 div.trigger{
@@ -40,12 +41,10 @@ div.trigger{
 }
 @media only screen and (max-width: 768px) {
   .dropdown .answer.active {
-    display: flex;
-    justify-content: center;
     align-items: center;
     margin: 0 auto;
     min-width: 280px;
-    display: block;
+    display: flex;
     text-align: center;
   }
   .dropdown .answer.active .parent {
