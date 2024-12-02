@@ -1,0 +1,53 @@
+/* General dropdown positioning */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  --bs-dropdown-bg: #f8f9fa; /* Light background */
+  --bs-dropdown-link-color: #343a40; /* Dark text */
+  --bs-dropdown-link-hover-bg: #e9ecef; /* Hover background */
+  --bs-dropdown-link-hover-color: #212529; /* Hover text color */
+}
+
+/* Make sure the toggle arrow looks right */
+.dropdown-toggle::after {
+  border-top-color: currentColor;
+}
+
+/* Custom dropdown item hover effect */
+.dropdown-item:hover {
+  background-color: var(--bs-dropdown-link-hover-bg);
+  color: var(--bs-dropdown-link-hover-color);
+  border-radius: 0.25rem;
+}
+
+/* Make sure the dropdown-menu is hidden by default */
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+  list-style: none;
+}
+
+
+.dropdown-item {
+  color: inherit; /* Inherit the text color of the dropdown */
+  text-decoration: none; /* Remove underline */
+
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item.active {
+  color: black; /* Change text color on hover or active state */
+  background-color: white; /* Set the background color for hover or active state */
+  text-decoration: none; /* Ensure there's no underline on hover/active */
+}
+
+/* Disable focus border on active dropdown item */
+.dropdown-item:focus {
+  outline: none;
+}
