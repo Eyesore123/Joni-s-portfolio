@@ -181,6 +181,11 @@ button {
         margin: 0px 10px;
     }
 
+    div.answer.active p {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
     .erikoistarjous {
         margin-top: 0px !important;
     }
