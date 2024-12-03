@@ -188,25 +188,29 @@
 
     <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #f1f1f1; display: none; place-items: center; padding: 10px;">
         <p>Tämä sivusto käyttää tarvittavia evästeitä perustoimintojen mahdollistamiseksi. 
-           <!-- <div class="buttonbox"> -->
+           <div class="buttonbox">
             <button class="cookiebutton" onclick="acceptCookies()">Hyväksy</button>
-           <!-- </div> -->
+           </div>
         </p>
     </div>
     
     <script>
         // Show cookie banner if not accepted
-        if (!localStorage.getItem('cookiesAccepted')) {
-            document.getElementById('cookie-banner').style.display = 'grid';
-        }
-    
-        function acceptCookies() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            document.getElementById('cookie-banner').style.display = 'none';
+    if (!localStorage.getItem('cookiesAccepted')) {
+        if (window.innerWidth < 1000) {
+        document.getElementById('cookie-banner').style.display = 'grid';
+    } else {
+        document.getElementById('cookie-banner').style.display = 'inline-flex';
+    }
+    }
 
-            // Set the cookie to expire after 24 hours (1 day)
-            setCookie('cookiesAccepted', 'true', 1);
-        }
+    function acceptCookies() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+
+    // Set the cookie to expire after 24 hours (1 day)
+    setCookie('cookiesAccepted', 'true', 1);
+    }
 
         // Function to set a cookie
         function setCookie(name, value, days) {
