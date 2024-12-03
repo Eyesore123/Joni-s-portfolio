@@ -117,9 +117,9 @@ button {
 }
 
 .cookiebutton {
-    margin-left: 10px;
+    margin-left: 20px;
     vertical-align: middle; /* Align button with text */
-    padding: 10px 20px; 
+    padding: 10pxpx; 
     border-radius: 5px;
     background-color: green; 
     color: white; 
@@ -134,9 +134,9 @@ button {
 
 #cookie-banner p {
     display: inline-block; /* Keep p and button inline */
-    vertical-align: middle; /* Ensure text aligns with button */
+    max-width: fit-content;
     margin: 0; 
-    padding: 10px 10px;
+    padding: 10px 0px;
 }
 
 @media (max-width: 768px) {
@@ -146,23 +146,24 @@ button {
     }
     
     #cookie-banner {
-        margin-bottom: 0px; /* Reduce padding on smaller screens */
+     
         font-size: 14px; /* Adjust font size for readability */
+        height: 135px;
+        padding: 0% important;
     }
 
     #cookie-banner p {
         
         margin: 0; 
-        padding: 1px;
-        padding-top: 5px;
         text-align: center;
+        font-size: 1.4em;
+        height: 412px !important;
     }
 
     .cookiebutton {
         font-size: 13px; /* Make button text smaller */
         padding: 13px 12px; /* Adjust button size */
         margin: 15px 38%; /* Adjust button margin */
-        margin-bottom: 5px;
     }
 
     section#home.content-section {
@@ -172,6 +173,7 @@ button {
     p.sub-header {
         font-size: 1.8em;
         line-height: 1.33em;
+        margin: 0px 5px;
     }
 }
 
