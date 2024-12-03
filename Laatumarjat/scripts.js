@@ -9,7 +9,7 @@ document.addEventListener('scroll', function () {
     const screenWidth = window.innerWidth; // Get the screen width
 
     // Use ternary to check if the screen width is 1440p
-    let fadePoint = screenWidth === 2560 ? wrapperOffsetTop - windowHeight + 600 : wrapperOffsetTop - windowHeight + 470;
+    let fadePoint = screenWidth === 2560 ? wrapperOffsetTop - windowHeight + 670 : wrapperOffsetTop - windowHeight + 540;
     let fadeDistance = screenWidth === 2560 ? 400 : 200; // Adjust fade distance for 1440p
 
     // If the user has scrolled past the fade point, fade the image out
