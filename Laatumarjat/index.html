@@ -158,7 +158,7 @@
 
     <section id="contact-us" class="content-section lower-slider fade-in whitebg">
         <h2>Ota yhteyttä</h2>
-        <form action="#" method="POST">
+        <form action="submit_form.php" method="POST">
             <label for="name">Nimi:</label>
             <input type="text" id="name" class="centered-input" name="name" required>
 
@@ -185,6 +185,38 @@
             </div>
         </div>
     </footer>
+
+    <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background: #f1f1f1; display: none; place-items: center; padding: 10px;">
+        <p style="display: inline; margin: 0;">Tämä sivusto käyttää tarvittavia evästeitä perustoimintojen mahdollistamiseksi. <button class="cookiebutton" onclick="acceptCookies()">Hyväksy</button></p>
+    </div>
+    
+    <script>
+        // Show cookie banner if not accepted
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'grid';
+        }
+    
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').style.display = 'none';
+
+            // Set the cookie to expire after 24 hours (1 day)
+            setCookie('cookiesAccepted', 'true', 1);
+        }
+
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+    </script>
+    
+    
     
     <script type="module" src="index.js"></script>
     <script src="scripts.js"></script>

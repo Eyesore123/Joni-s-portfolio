@@ -117,10 +117,34 @@ button {
     cursor: pointer;
 }
 
+.cookiebutton {
+    margin-left: 10px;
+    vertical-align: middle; /* Align button with text */
+    padding: 10px 20px; /* Adjust padding for better look */
+    border-radius: 5px;
+    background-color: green; /* Keep the green background */
+    color: white; /* Text color */
+    border: 2px solid yellow; /* Transparent border initially */
+    position: relative;
+    overflow: hidden; /* Hide any overflow from the pseudo-element */
+}
+
+/* Adjusting text color on hover */
+.cookiebutton:hover {
+    color: black;
+}
+
+#cookie-banner p {
+    display: inline-block; /* Keep p and button inline */
+    vertical-align: middle; /* Ensure text aligns with button */
+    margin: 0; /* Remove default margins for p */
+    padding: 10px 10px;
+}
+
+
 button:hover {
     background-color: #A3D6A8;
 }
-
 
 /* Scroll Effects */
 .fade-in {
