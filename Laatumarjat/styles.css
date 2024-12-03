@@ -146,7 +146,7 @@ button {
     }
     
     #cookie-banner {
-        margin-bottom: 40px; /* Reduce padding on smaller screens */
+        margin-bottom: 0px; /* Reduce padding on smaller screens */
         font-size: 14px; /* Adjust font size for readability */
     }
 
