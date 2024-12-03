@@ -125,7 +125,7 @@ button {
     color: white; 
     border: 3px solid yellow; 
     position: relative;
-    overflow: hidden; 
+   
 }
 
 .cookiebutton:hover {
@@ -134,7 +134,6 @@ button {
 
 #cookie-banner p {
     display: inline-block; /* Keep p and button inline */
-    max-width: fit-content;
     margin: 0; 
     padding: 10px 0px;
 }
@@ -145,25 +144,26 @@ button {
         height: 240px;
     }
     
-    #cookie-banner {
-     
+    div#cookie-banner {
         font-size: 14px; /* Adjust font size for readability */
-        height: 135px;
-        padding: 0% important;
+        padding: 0% !important;
     }
 
     #cookie-banner p {
         
         margin: 0; 
         text-align: center;
-        font-size: 1.4em;
-        height: 412px !important;
+        font-size: 1.2em;
+        padding-top: 30px !important;
+        padding-bottom: 0% !important;
     }
 
     .cookiebutton {
         font-size: 13px; /* Make button text smaller */
-        padding: 13px 12px; /* Adjust button size */
-        margin: 15px 38%; /* Adjust button margin */
+         /* Adjust button size */
+        margin: 13px 38%; /* Adjust button margin */
+        bottom: 0px;
+        position: relative;
     }
 
     section#home.content-section {
