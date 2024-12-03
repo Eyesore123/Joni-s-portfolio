@@ -16,3 +16,7 @@ npm-debug.log*
 # .Env-folder
 
 .env/
+
+# Vendor folder
+
+vendor/
