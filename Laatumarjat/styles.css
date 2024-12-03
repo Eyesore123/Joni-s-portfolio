@@ -21,7 +21,7 @@ body {
 .header {
     position: relative;
     text-align: center;
-    padding: 100px 20px; /* Increased padding for more space */
+    padding: 100px 20px; 
     color: #333; /* Dark text color for contrast */
     background-color: rgba(255, 255, 255, 0.65); /* Light semi-transparent background for readability */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for definition */
@@ -46,6 +46,7 @@ h1 {
     margin-bottom: 20px;
     color: #2D2D2D; /* Darker shade for better contrast */
 }
+
 h2 {
     font-size: 2em;
     color: #2D2D2D; /* Darker shade for better contrast */
@@ -78,14 +79,12 @@ p {
     background-color: rgba(255, 255, 255, 0.85); /* Light background */
 }
 
-/* Heading Style */
 #contact-us h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
     color: #333;
 }
 
-/* Contact Form */
 form {
     display: flex;
     flex-direction: column;
@@ -120,16 +119,15 @@ button {
 .cookiebutton {
     margin-left: 10px;
     vertical-align: middle; /* Align button with text */
-    padding: 10px 20px; /* Adjust padding for better look */
+    padding: 10px 20px; 
     border-radius: 5px;
-    background-color: green; /* Keep the green background */
-    color: white; /* Text color */
-    border: 2px solid yellow; /* Transparent border initially */
+    background-color: green; 
+    color: white; 
+    border: 3px solid yellow; 
     position: relative;
-    overflow: hidden; /* Hide any overflow from the pseudo-element */
+    overflow: hidden; 
 }
 
-/* Adjusting text color on hover */
 .cookiebutton:hover {
     color: black;
 }
@@ -137,8 +135,44 @@ button {
 #cookie-banner p {
     display: inline-block; /* Keep p and button inline */
     vertical-align: middle; /* Ensure text aligns with button */
-    margin: 0; /* Remove default margins for p */
+    margin: 0; 
     padding: 10px 10px;
+}
+
+@media (max-width: 768px) {
+    
+    header.header {
+        height: 240px;
+    }
+    
+    #cookie-banner {
+        margin-bottom: 40px; /* Reduce padding on smaller screens */
+        font-size: 14px; /* Adjust font size for readability */
+    }
+
+    #cookie-banner p {
+        
+        margin: 0; 
+        padding: 1px;
+        padding-top: 5px;
+        text-align: center;
+    }
+
+    .cookiebutton {
+        font-size: 13px; /* Make button text smaller */
+        padding: 13px 12px; /* Adjust button size */
+        margin: 15px 38%; /* Adjust button margin */
+        margin-bottom: 5px;
+    }
+
+    section#home.content-section {
+        margin-top: 20px;
+    }
+
+    p.sub-header {
+        font-size: 1.8em;
+        line-height: 1.33em;
+    }
 }
 
 
