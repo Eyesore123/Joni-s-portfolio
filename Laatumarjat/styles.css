@@ -176,6 +176,14 @@ button {
         line-height: 1.33em;
         margin: 0px 5px;
     }
+
+    p {
+        margin: 0px 10px;
+    }
+
+    .erikoistarjous {
+        margin-top: 0px !important;
+    }
 }
 
 
@@ -339,7 +347,8 @@ li {
     }
 
     h2 {
-        max-width: 70%;
+        max-width: 70% !important;
+        font-size: 28px !important;
     }
 
     .trigger{
@@ -351,6 +360,14 @@ li {
         justify-content: center;
         font-size: 16px;
         line-height: 1.2;
+    }
+
+    form {
+        max-width: 70%;
+    }
+
+    .content-section.qa h2 {
+        margin-bottom: 0 !important;
     }
 
 
