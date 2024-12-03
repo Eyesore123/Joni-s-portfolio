@@ -516,9 +516,9 @@ be to the right of the contact info */
     	}
 
         .cookiebutton {
-        margin-left: -1px;
+        margin-left: -2px;
         vertical-align: middle; /* Align button with text */
-        padding: 7px 7px; 
+        padding: 7px 9px; 
         border-radius: 0px;
         background-color: rgb(235, 235, 235); 
         border: none;
