@@ -477,7 +477,7 @@ be to the right of the contact info */
     .buttonbox {
         --border-angle: 0deg;
         border-radius: 5px;
-        width: 115px;
+        width: 114px;
         height: 53px;
         justify-content: center;
         align-items: center;
@@ -518,7 +518,7 @@ be to the right of the contact info */
         .cookiebutton {
         margin-left: -1px;
         vertical-align: middle; /* Align button with text */
-        padding: 7px 13px; 
+        padding: 7px 7px; 
         border-radius: 0px;
         background-color: rgb(235, 235, 235); 
         border: none;
