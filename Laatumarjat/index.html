@@ -194,33 +194,49 @@
     </div>
     
     <script>
-        // Show cookie banner if not accepted
-    if (!localStorage.getItem('cookiesAccepted')) {
-        if (window.innerWidth < 1000) {
-        document.getElementById('cookie-banner').style.display = 'grid';
-    } else {
+
+      // Screen sizes when cookie is not accepted yet
+    
+        if (window.innerWidth > 1000) {
         document.getElementById('cookie-banner').style.display = 'inline-flex';
-    }
-    }
+        } else {
+        document.getElementById('cookie-banner').style.display = 'grid';
+        }
+
+    // Cookiebanner disappear when stored cookies are found
+
+        if(localStorage.getItem('cookiesAccepted') === 'true') {
+                document.getElementById('cookie-banner').style.display = 'none';
+            }
+ 
 
     function acceptCookies() {
-    localStorage.setItem('cookiesAccepted', 'true');
-    document.getElementById('cookie-banner').style.display = 'none';
+    
+        localStorage.setItem('cookiesAccepted', 'true');
 
-    // Set the cookie to expire after 24 hours (1 day)
-    setCookie('cookiesAccepted', 'true', 1);
+        // Set the cookie to expire after 24 hours (1 day)
+        setCookie('cookiesAccepted', 'true', 1);
+
+        console.log('Cookies accepted');
+        
+
+            // Function to set a cookie
+            function setCookie(name, value, days) {
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            // Remove cookie banner if cookies are accepted
+            
+            document.getElementById('cookie-banner').style.display = 'none';
+            
     }
 
-        // Function to set a cookie
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        }
     </script>
     
     

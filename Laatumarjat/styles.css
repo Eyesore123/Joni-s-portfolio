@@ -456,18 +456,7 @@ be to the right of the contact info */
         margin-top: 50px;
     }
 
-    /* For keeping the cookie banner in grid form on mobile */
 
-    #cookie-banner {
-        display: flex;
-      }
-      
-      
-      @media (max-width: 1000px) {
-        #cookie-banner {
-          display: grid !important;
-        }
-      }
 
         /* For a stylized button: */
   
@@ -506,7 +495,7 @@ be to the right of the contact info */
             background: var(--bg);
             display: flex;
             align-items: center;
-            justify-content: center
+            justify-content: center;
         }
   
     	@property --border-angle {
