@@ -536,3 +536,26 @@ be to the right of the contact info */
         margin-right: 40px;
     }
 }
+
+#message-sent {
+    display: block;
+    margin-top: 70px;
+    background-color: rgb(103, 255, 103);
+}
+
+@media screen and (max-width: 1025px) {
+    
+    #message-sent {
+        margin-top: 10px;
+    }
+
+    #message-sent p {
+        padding: 10px;
+    }
+}
+
+#map {
+    display: block;
+    height: 400px;
+    max-width: 1200px;
+}

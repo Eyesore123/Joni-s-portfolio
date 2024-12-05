@@ -7,6 +7,7 @@
     <title>Laatumarjat.fi</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="dropdown.css">
+    <script async src="https://maps.googleapis.com/maps/api/js?key={YOUR_API_KEY}&callback=initMap&libraries=maps,marker&v=beta"></script>
 </head>
 <body>
 
@@ -157,7 +158,7 @@
 
     <section id="contact-us" class="content-section lower-slider fade-in whitebg">
         <h2>Ota yhteyttä</h2>
-        <form action="submit_form.php" method="POST">
+        <form action="submit_form.php" id="contact-form" method="POST">
             <label for="name">Nimi:</label>
             <input type="text" id="name" class="centered-input" name="name" required>
 
@@ -168,8 +169,16 @@
             <textarea id="message" class="centered-input" name="message" required></textarea>
 
             <button type="submit">Lähetä viesti</button>
+
+            <div id="message-sent" style="display: none;">
+                <p>Viestisi on lähetetty onnistuneesti! Vastaamme mahdollisimman pian.</p>
+            </div>
+
         </form>
     </section>
+
+
+    <div id="map" class="map content-section"></div>
 
     <footer>
         <div class="footer-container">
@@ -238,9 +247,33 @@
     }
 
     </script>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+        e.preventDefault();  // Prevent the form from submitting normally
     
+        var formData = new FormData(this);
     
-    
+        // AJAX request using fetch
+        fetch("submit_form.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(responseText => {
+            // Show success message by changing the display style of message-sent
+            if (responseText === 'success') {
+                document.getElementById("message-sent").style.display = 'block';
+            }
+        })
+        .catch(error => {
+            // Optionally handle the error (you can hide the message or show a failure message)
+            console.error('Error:', error);
+        });
+    });
+    </script>
+
+    <script src="map.js"></script>
     <script type="module" src="index.js"></script>
     <script src="scripts.js"></script>
 </body>
