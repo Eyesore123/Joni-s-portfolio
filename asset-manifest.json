@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Joni-s-portfolio/quiz-react-app/static/css/main.4aedf761.css",
+    "main.js": "/Joni-s-portfolio/quiz-react-app/static/js/main.73bb9442.js",
+    "static/media/philosophers.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/philosophers.36ba4ecb2b154f810f52.jpg",
+    "static/media/epicurus.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/epicurus.46bb0bccd769e4e2daef.jpg",
+    "static/media/kierkegaard.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/kierkegaard.3dc33a6f3a406e54352d.jpg",
+    "static/media/schopenhauer.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/schopenhauer.45b7c89273009eab65e5.jpg",
+    "static/media/aristotle.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/aristotle.5dea028feb37555352f6.jpg",
+    "static/media/james.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/james.7d85fd9e46f2639b74af.jpg",
+    "static/media/nietzsche.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/nietzsche.e75531aa772991cb2c84.jpg",
+    "static/media/Epictetus-1.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/Epictetus-1.9282b6389c9202e7b448.jpg",
+    "static/media/protagoras.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/protagoras.615f88f1c70937be262a.jpg",
+    "static/media/sartre.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/sartre.676eac7ff417f804b811.jpg",
+    "static/media/heraclitus.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/heraclitus.a0d21dcc9239e3505234.jpg",
+    "index.html": "/Joni-s-portfolio/quiz-react-app/index.html",
+    "main.4aedf761.css.map": "/Joni-s-portfolio/quiz-react-app/static/css/main.4aedf761.css.map",
+    "main.73bb9442.js.map": "/Joni-s-portfolio/quiz-react-app/static/js/main.73bb9442.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4aedf761.css",
+    "static/js/main.73bb9442.js"
+  ]
+}
