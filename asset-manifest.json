@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Joni-s-portfolio/quiz-react-app/static/css/main.4aedf761.css",
-    "main.js": "/Joni-s-portfolio/quiz-react-app/static/js/main.cdcb7ba6.js",
+    "main.js": "/Joni-s-portfolio/quiz-react-app/static/js/main.fab2fabc.js",
     "static/media/philosophers.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/philosophers.36ba4ecb2b154f810f52.jpg",
     "static/media/epicurus.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/epicurus.46bb0bccd769e4e2daef.jpg",
     "static/media/kierkegaard.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/kierkegaard.3dc33a6f3a406e54352d.jpg",
@@ -15,10 +15,10 @@
     "static/media/heraclitus.jpg": "/Joni-s-portfolio/quiz-react-app/static/media/heraclitus.a0d21dcc9239e3505234.jpg",
     "index.html": "/Joni-s-portfolio/quiz-react-app/index.html",
     "main.4aedf761.css.map": "/Joni-s-portfolio/quiz-react-app/static/css/main.4aedf761.css.map",
-    "main.cdcb7ba6.js.map": "/Joni-s-portfolio/quiz-react-app/static/js/main.cdcb7ba6.js.map"
+    "main.fab2fabc.js.map": "/Joni-s-portfolio/quiz-react-app/static/js/main.fab2fabc.js.map"
   },
   "entrypoints": [
     "static/css/main.4aedf761.css",
-    "static/js/main.cdcb7ba6.js"
+    "static/js/main.fab2fabc.js"
   ]
 }
