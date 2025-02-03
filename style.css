@@ -398,7 +398,8 @@ footer {
 input#someInput {
     width: 300px;
     height: 33px;
-    margin-right: 4px;
+    margin-left: 55px;
+    margin-top: 40px;
     text-align: center;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;

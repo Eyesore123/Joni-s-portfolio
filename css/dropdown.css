@@ -1,6 +1,9 @@
 /* General dropdown positioning */
 .dropdown {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .dropdown-menu {
@@ -28,14 +31,16 @@
 }
 
 .dropdown-menu.show {
-  display: block;
+  display: flex;
   list-style: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 .dropdown-item {
-  color: inherit; /* Inherit the text color of the dropdown */
   text-decoration: none; /* Remove underline */
+  background-color: white !important; /* Set the background color */
 
 }
 
@@ -50,4 +55,15 @@
 /* Disable focus border on active dropdown item */
 .dropdown-item:focus {
   outline: none;
+}
+
+li {
+  background-color: white;
+  width: 55%;
+  display: block;
+}
+
+button {
+  padding : 10px;
+  margin-top: 2vh;
 }
