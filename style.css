@@ -627,3 +627,9 @@ button {
   .popup-content {
     padding: 20px 25px;
   }
+
+  .addbutton {
+    box-sizing: border-box;
+    margin-top: 36px;
+  }
+
