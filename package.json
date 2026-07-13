@@ -5,7 +5,7 @@
     "bootstrap": "^5.3.3",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.1.14"
   },
   "name": "jonis-website",
   "description": "Joni's portfolio",
